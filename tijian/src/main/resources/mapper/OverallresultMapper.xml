@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.demo.tijian.mapper.OverallresultMapper">
+
+    <resultMap id="BaseResultMap" type="com.neuedu.demo.tijian.pojo.Overallresult">
+            <id property="orid" column="orId" jdbcType="INTEGER"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="orderid" column="orderId" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        orId,title,content,
+        orderId
+    </sql>
+</mapper>
