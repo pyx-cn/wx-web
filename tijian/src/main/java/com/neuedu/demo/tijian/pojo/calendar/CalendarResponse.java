@@ -4,7 +4,7 @@ public class CalendarResponse {
     private String ymd;
     private Integer total;
     private Integer existing;
-    private Integer remainder;
+    private Integer remainder; // 剩余天数
 
     public CalendarResponse() {}
 

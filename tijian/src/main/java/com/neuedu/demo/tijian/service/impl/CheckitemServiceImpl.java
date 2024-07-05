@@ -29,11 +29,11 @@ public class CheckitemServiceImpl extends ServiceImpl<CheckitemMapper, Checkitem
     @Override
     public List<Checkitem> getCheckitems(Integer smId) {
         List<Integer> ciIds = setmealdetailedMapper.getClidIds(smId);
-        List<Checkitem> checkitems = new ArrayList<>();
+        List<Checkitem> checkItems = new ArrayList<>();
         for(int i = 0; i < ciIds.size(); i++){
-            checkitems.add(checkitemMapper.selectById(ciIds.get(i)));
+            checkItems.add(checkitemMapper.selectById(ciIds.get(i)));
         }
-        return checkitems;
+        return checkItems;
     }
 }
 

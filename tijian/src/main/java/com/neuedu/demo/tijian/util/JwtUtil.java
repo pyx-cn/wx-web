@@ -18,7 +18,7 @@ public class JwtUtil {
         claims.put("password",users.getPassword());
 
         String jwt = Jwts.builder() //Jwts是jwt依赖包提供的工具类，直接调用
-                .signWith(SignatureAlgorithm.HS512,"itheima")//加密方式，密钥(长度大于3个字符)
+                .signWith(SignatureAlgorithm.HS512,"huanong")//加密方式，密钥(长度大于3个字符)
                 .setClaims(claims)//载荷数据(自定义的内容)
                 .setExpiration(new Date(System.currentTimeMillis() + 3600 * 1000))//令牌有效期
                 .compact();
@@ -34,7 +34,7 @@ public class JwtUtil {
     public static void parseJWT(String token){
         System.out.println(token);
         Claims abcd = Jwts.parser()
-                .setSigningKey("itheima")//指定签名密钥
+                .setSigningKey("huanong")//指定签名密钥
                 .parseClaimsJws(token)
                 .getBody();//获取令牌中的载荷
         System.out.println(abcd);

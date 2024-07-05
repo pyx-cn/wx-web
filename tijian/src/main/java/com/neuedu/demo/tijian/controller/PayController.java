@@ -152,7 +152,7 @@ public class PayController {
                 aliPayConfig.getALIPAY_PUBLIC_KEY(), aliPayConfig.getCHARSET(),
                 aliPayConfig.getSIGN_TYPE()); // 调用SDK验证签名
         // 验证签名通过
-        if(signVerified){
+        if (signVerified) {
             // 商户订单号
             String out_trade_no = new
                     String(request.getParameter("out_trade_no").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
@@ -172,7 +172,13 @@ public class PayController {
             // 支付成功，修改支付状态
 
             System.out.println("success");
-        }else{
+
+//            Orders orders = new Orders();
+//            orders.setOrderId(Integer.valueOf(out_trade_no));
+//            orders.setState(2);
+//            ordersMapper.updateById(orders);
+            response.sendRedirect("http://localhost:5173/appointmentsuccess");
+        } else {
             System.out.println("fail");
         }
     }
@@ -203,7 +209,7 @@ public class PayController {
                 aliPayConfig.getALIPAY_PUBLIC_KEY(), aliPayConfig.getCHARSET(),
                 aliPayConfig.getSIGN_TYPE()); // 调用SDK验证签名
         // 验证签名通过
-        if(signVerified){
+        if (signVerified) {
             // 商户订单号
             String out_trade_no = new
                     String(request.getParameter("out_trade_no").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
@@ -223,7 +229,7 @@ public class PayController {
             // 支付成功，修改支付状态
 
             System.out.println("success");
-        }else{
+        } else {
             System.out.println("fail");
         }
     }

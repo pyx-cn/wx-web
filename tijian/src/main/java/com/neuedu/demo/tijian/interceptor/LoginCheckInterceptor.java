@@ -28,7 +28,7 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
         System.out.println(url);
 
         /*2、判断url中是否包含login，如果包含，说明是登录接口，放行*/
-        if(url.contains("login")){
+        if(url.contains("login") || url.contains("register")){
             return true;
         }
 

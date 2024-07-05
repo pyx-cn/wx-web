@@ -1,5 +1,6 @@
 package com.neuedu.demo.tijian.service;
 
+import com.neuedu.demo.tijian.dto.Response;
 import com.neuedu.demo.tijian.pojo.Users;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -12,6 +13,10 @@ public interface UsersService extends IService<Users> {
 
     public Users login(Users user);
 
+    public Response dealLogin(Users user);
+
     public Users register(Users user);
+
+    public Response dealRegister(Users user);
 
 }
